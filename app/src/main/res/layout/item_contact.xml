@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_selector"
+    android:padding="16dp"
+    android:layout_margin="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/textContactNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nom du Contact"
+        android:textColor="#E8EAF2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textContactTelephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="034 00 000 00"
+        android:textColor="#7B7F96"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>
