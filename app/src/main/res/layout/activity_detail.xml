@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0F13">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- ═══ BARRE DU HAUT : flèche + titre + menu ═══ -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageButton
+                android:id="@+id/btnRetour"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#E8EAF2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Détail"
+                android:textColor="#E8EAF2"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <!-- ═══ AVATAR + NOM + SOUS-TITRE ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Avatar circulaire avec initiales -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_person"
+                android:tint="#7B7F96" />
+
+            <!-- Nom complet -->
+            <TextView
+                android:id="@+id/textDetailNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alice Lemaire"
+                android:textColor="#E8EAF2"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+            <!-- Sous-titre : relation + date -->
+            <TextView
+                android:id="@+id/textDetailSousTitre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amie · Ajouté le 12 mai 2024"
+                android:textColor="#7B7F96"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- ═══ 4 BOUTONS D'ACTION EN LIGNE ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <!-- Bouton Appeler -->
+            <LinearLayout
+                android:id="@+id/btnAppeler"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_action_button_green"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_call"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Appeler"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Bouton SMS -->
+            <LinearLayout
+                android:id="@+id/btnSMS"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_action_button_sms"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_sms"
+                    app:tint="#E8EAF2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SMS"
+                    android:textColor="#E8EAF2"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Bouton Email -->
+            <LinearLayout
+                android:id="@+id/btnEmail"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_action_button_email"
+                android:layout_marginEnd="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_email"
+                    app:tint="#E8EAF2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="#E8EAF2"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Bouton Supprimer -->
+            <LinearLayout
+                android:id="@+id/btnSupprimer"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_action_button_delete">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_delete"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supprimer"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ═══ CARTE D'INFOS ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_dark"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="20dp">
+
+            <!-- Ligne Téléphone -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_call"
+                    app:tint="#7B7F96" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TÉLÉPHONE"
+                        android:textColor="#7B7F96"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:id="@+id/textDetailTelephone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+33 6 12 34 56 78"
+                        android:textColor="#E8EAF2"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1E2030"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Ligne Email -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_email"
+                    app:tint="#7B7F96" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMAIL"
+                        android:textColor="#7B7F96"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:id="@+id/textDetailEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="alice@email.fr"
+                        android:textColor="#E8EAF2"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Séparateur -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1E2030"
+                android:layout_marginHorizontal="16dp" />
+
+            <!-- Ligne Note -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_work"
+                    app:tint="#7B7F96" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NOTE"
+                        android:textColor="#7B7F96"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:id="@+id/textDetailNote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collègue de travail"
+                        android:textColor="#E8EAF2"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ═══ BOUTON MODIFIER EN BAS ═══ -->
+        <Button
+            android:id="@+id/btnModifier"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="✏️  Modifier ce contact"
+            android:textColor="#0E0F13"
+            android:backgroundTint="#6C63FF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="32dp" />
+
+    </LinearLayout>
+</ScrollView>

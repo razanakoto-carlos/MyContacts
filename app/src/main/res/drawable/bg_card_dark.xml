@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="rectangle">
+
+    <!-- Légèrement plus clair que le fond pour créer une "élévation visuelle" -->
+    <solid android:color="#161825" />
+
+    <!-- Coins arrondis généreux pour un look moderne -->
+    <corners android:radius="20dp" />
+
+    <!-- Bordure très subtile pour définir les bords sans être tape-à-l'œil -->
+    <stroke
+        android:width="1dp"
+        android:color="#1E2030" />
+
+</shape>

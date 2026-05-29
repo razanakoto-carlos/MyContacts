@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void chargerContactsDepuisLaBase() {
+        listeContacts.clear();
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor curseur = db.rawQuery("SELECT * FROM contacts", null);
 
@@ -51,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
             } while (curseur.moveToNext());
         }
         curseur.close();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+        chargerContactsDepuisLaBase();
     }
 
 }

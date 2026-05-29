@@ -19,12 +19,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "nom VARCHAR, "
                 + "telephone VARCHAR, "
                 + "email VARCHAR, "
-                + "note VARCHAR);";
+                + "note VARCHAR, "
+                + "date_creation DATE DEFAULT (date('now')));";
 
         db.execSQL(query);
 
-        db.execSQL("INSERT INTO contacts VALUES(null, 'Carlos', '034000000', 'carlos@email.com', 'Développeur Fullstack');");
-        db.execSQL("INSERT INTO contacts VALUES(null, 'Prof de Mobile', '032111111', 'prof@school.com', 'Enseignant SQLite');");
+        db.execSQL("INSERT INTO contacts(nom, telephone, email, note) "
+                + "VALUES('Carlos', '034000000', 'carlos@email.com', 'Développeur Fullstack');");
+
+        db.execSQL("INSERT INTO contacts(nom, telephone, email, note) "
+                + "VALUES('Prof de Mobile', '032111111', 'prof@school.com', 'Enseignant SQLite');");
 
     }
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="oval">
+
+    <!-- Couleur de fond : violet doux, inspiré du design -->
+    <solid android:color="#3D3A6B" />
+
+    <!-- Pas de bordure ici, mais on peut en ajouter une subtile -->
+    <stroke
+        android:width="2dp"
+        android:color="#5A5490" />
+
+</shape>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="rectangle">
+
+    <!-- Violet principal du design : correspond à l'accent de l'app -->
+    <solid android:color="#6C63FF" />
+
+    <!-- Coins très arrondis pour effet "pill" -->
+    <corners android:radius="28dp" />
+
+</shape>

@@ -1,5 +1,6 @@
 package mg.carlos.mycontacts;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,23 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
 
         holder.textNom.setText(actuel.getNom());
         holder.textTelephone.setText(actuel.getTelephone());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int vraiePosition = holder.getAdapterPosition();
+
+                if(vraiePosition != RecyclerView.NO_POSITION){
+                    Contact contactClique = contactList.get(vraiePosition);
+
+                    android.content.Intent intention = new android.content.Intent(view.getContext(),DetailActivity.class);
+
+                    intention.putExtra("CONTACT_ID",contactClique.getId());
+                    view.getContext().startActivity(intention);
+                }
+            }
+        });
+
     }
 
     @Override

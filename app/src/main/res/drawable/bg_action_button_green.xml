@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    android:shape="rectangle">
+
+    <!-- Vert foncé, visible mais pas agressif -->
+    <solid android:color="#1E5C2F" />
+
+    <!-- Coins arrondis : 16dp pour un look "pill carré" moderne -->
+    <corners android:radius="16dp" />
+
+</shape>

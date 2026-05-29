@@ -4,8 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_action_button_dark.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_action_button_delete.xml" value="0.1365" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_action_button_email.xml" value="0.1365" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_action_button_green.xml" value="0.1" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_action_button_sms.xml" value="0.1365" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_avatar_circle.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_button_modifier.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/bg_card_dark.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/ic_delete.xml" value="0.1365" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/ic_email.xml" value="0.1" />
         <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/ic_sms.xml" value="0.1355" />
         <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/drawable/item_selector.xml" value="0.1355" />
+        <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/layout/activity_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Learning/Programming-Courses/Android/MyContacts/app/src/main/res/layout/item_contact.xml" value="0.20416666666666666" />
       </map>
