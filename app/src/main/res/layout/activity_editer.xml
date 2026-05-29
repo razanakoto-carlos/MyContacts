@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E0F13"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- ═══ BARRE DU HAUT ═══ -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageButton
+                android:id="@+id/btnRetour"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTitreEcran"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="56dp"
+                android:text="Nouveau contact"
+                android:textColor="#E8EAF2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- ═══ AVATAR PHOTO ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="28dp">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_person"
+                app:tint="#FFFFFF" />
+
+        </LinearLayout>
+
+        <!-- ═══ FORMULAIRE ═══ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <!-- Label NOM COMPLET -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOM COMPLET *"
+                android:textColor="#E05A5A"
+                android:textSize="11sp"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Champ NOM avec bordure violette active -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_input_active"
+                android:paddingHorizontal="14dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_person"
+                    android:layout_marginEnd="10dp"
+                    app:tint="#7B7F96" />
+
+                <EditText
+                    android:id="@+id/editNom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Carlos Diaz"
+                    android:textColor="#E8EAF2"
+                    android:textColorHint="#7B7F96"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Label TÉLÉPHONE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TÉLÉPHONE *"
+                android:textColor="#E05A5A"
+                android:textSize="11sp"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Champ TÉLÉPHONE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_input_normal"
+                android:paddingHorizontal="14dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_call"
+                    android:layout_marginEnd="10dp"
+                    app:tint="#7B7F96" />
+
+                <EditText
+                    android:id="@+id/editTelephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="+33 6 …"
+                    android:textColor="#E8EAF2"
+                    android:textColorHint="#7B7F96"
+                    android:background="@android:color/transparent"
+                    android:inputType="phone"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Label EMAIL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL"
+                android:textColor="#7B7F96"
+                android:textSize="11sp"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Champ EMAIL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_input_normal"
+                android:paddingHorizontal="14dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_email"
+                    android:layout_marginEnd="10dp"
+                    app:tint="#7B7F96" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="adresse@email.com"
+                    android:textColor="#E8EAF2"
+                    android:textColorHint="#7B7F96"
+                    android:background="@android:color/transparent"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Label NOTE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOTE"
+                android:textColor="#7B7F96"
+                android:textSize="11sp"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Champ NOTE (plus haut pour multiline) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:background="@drawable/bg_input_normal"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="14dp"
+                android:layout_marginBottom="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_sms"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="2dp"
+                    app:tint="#7B7F96" />
+
+                <EditText
+                    android:id="@+id/editNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Ajouter une note…"
+                    android:textColor="#E8EAF2"
+                    android:textColorHint="#7B7F96"
+                    android:background="@android:color/transparent"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Mention champs obligatoires -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="* Champs obligatoires"
+                android:textColor="#7B7F96"
+                android:textSize="12sp"
+                android:gravity="end"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Bouton ENREGISTRER -->
+
+            <!-- Bouton ANNULER -->
+            <Button
+                android:id="@+id/btnEnregistrer"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_button_modifier"
+                android:text="💾  Enregistrer le contact"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnAnnuler"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:text="Annuler"
+                android:textColor="#7B7F96"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

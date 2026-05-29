@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DetailActivity extends AppCompatActivity {
-    private TextView textNom, textTelephone, textEmail,textNote,textDetailSousTitre;
+    private TextView textNom, textTelephone, textEmail,textNote,textDetailSousTitre,btnModifier;
     private DatabaseHelper dbHelper;
     private int contactId = -1;
 
@@ -32,6 +33,7 @@ public class DetailActivity extends AppCompatActivity {
         textEmail = findViewById(R.id.textDetailEmail);
         textNote = findViewById(R.id.textDetailNote);
         textDetailSousTitre = findViewById(R.id.textDetailSousTitre);
+        btnModifier = findViewById(R.id.btnModifier);
         ImageButton btnRetour = findViewById(R.id.btnRetour);
 
         LinearLayout btnAppeler = findViewById(R.id.btnAppeler);
@@ -45,9 +47,16 @@ public class DetailActivity extends AppCompatActivity {
         btnSupprimer.setOnClickListener(v -> supprimerContact());
         btnRetour.setOnClickListener(v -> finish());
 
+        btnModifier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailActivity.this, EditerActivity.class);
+                intent.putExtra("CONTACT_ID", contactId);
+                startActivity(intent);
+            }
+        });
+
         dbHelper = new DatabaseHelper(this);
-
-
 
         contactId = getIntent().getIntExtra("CONTACT_ID", -1);
 
@@ -140,4 +149,11 @@ public class DetailActivity extends AppCompatActivity {
             return dateIso;
         }
     }
+    protected void onResume() {
+        super.onResume();
+        if (contactId != -1) {
+            chargerDetailsContact(contactId);
+        }
+    }
 }
+
