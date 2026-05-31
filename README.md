@@ -7,8 +7,6 @@
 
 ## 📸 Aperçu des écrans
 
-> Remplace les chemins ci-dessous par tes vraies captures d'écran (voir section [Comment capturer les screenshots](#-comment-capturer-les-screenshots))
-
 | Écran 1 — Liste | Écran 2 — Détail | Écran 3 — Formulaire |
 |:-:|:-:|:-:|
 | ![Liste des contacts](screenshots/screen_liste.png) | ![Détail du contact](screenshots/screen_detail.png) | ![Formulaire ajout/modification](screenshots/screen_form.png) |
